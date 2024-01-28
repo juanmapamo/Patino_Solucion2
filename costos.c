@@ -21,7 +21,18 @@ int main(int argc, char const *argv[])
         return 1; 
     }
     float costo_total = 0.0;
-    for (int i = 0; i < cantidad_ordenes; ++i) {
+    for (int i = 0; i < cantidad_ordenes; ++i) 
+    {
         struct OrdenTrabajo orden;
+        printf("\nOrden de trabajo #%d\n", i + 1);
+        printf("Ingrese el tipo de trabajo: ");
+        scanf("%s", orden.tipo_trabajo);
+
+        printf("Ingrese el costo: ");
+        scanf("%f", &orden.costo);
+
+        ordenes_de_trabajo[num_ordenes++] = orden;
+        costo_total += orden.costo;
+    }
     return 0;
 }
