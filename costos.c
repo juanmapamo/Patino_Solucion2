@@ -34,5 +34,11 @@ int main(int argc, char const *argv[])
         ordenes_de_trabajo[num_ordenes++] = orden;
         costo_total += orden.costo;
     }
+    printf("\nListado de ordenes de trabajo:\n");
+    for (int i = 0; i < num_ordenes; ++i) {
+        printf("%s: $%.2f\n", ordenes_de_trabajo[i].tipo_trabajo, ordenes_de_trabajo[i].costo);
+    }
+    printf("\nCosto total de las ordenes: $%.2f\n", costo_total);
+    
     return 0;
 }
