@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 struct OrdenTrabajo {
     char tipo_trabajo[50];
